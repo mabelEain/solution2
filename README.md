@@ -3,5 +3,5 @@
 ### Requirements
 
 ` pip install flask` to start the server and then
-` run app.py` \t\n
+` run app.py` 
 `load userdata.html` try to search email and will see the user info
