@@ -34,7 +34,7 @@
             .then(response => response.json())
             .then(data => {
                 if (data.error) {
-                    document.getElementById('userdata').innerText = data.error;
+                    document.getElementById('userdata').innerHTML = `<p><strong> ${data.error} </strong></p>`;
                 } else {
                     document.getElementById('userdata').innerHTML = `
                         <table class="table table-striped">

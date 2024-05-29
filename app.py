@@ -22,10 +22,14 @@ def get_users():
 # Get user by email
 @app.route("/users", methods=["POST"])
 def user_by_email():
-    email = request.json["email"]
-    for user in users:
-        if user['email'] == email:
-            return user
+    try:
+        if request.method == "POST":
+            email = request.json["email"]
+            for user in users:
+                if user['email'] == email:
+                    return user
+    except Exception as e:
+        print("Exception occurred: {}".format(e))
     return {"error": "User not found"}
 
 
